@@ -26,7 +26,8 @@ function Home() {
           Apaixonado por criar experiências web bonitas e funcionais com tecnologias modernas. Sempre disposto a aprender e crescer no mundo em constante evolução do desenvolvimento web.
         </S.Descricao_A>
         <S.ButtonCV>
-          <S.aCV href="/files/CV_Joao_Stefanon.pdf" download="CV_Joao_Stefanon.pdf">Download CV</S.aCV>
+          <S.aCV href="/files/curriculo.pdf" download="CV_Joao_Stefanon.pdf">Download CV</S.aCV>
+
         </S.ButtonCV>
 
         <S.SocialContainer>
