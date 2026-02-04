@@ -12,7 +12,7 @@ function Home() {
             <S.Button><S.a href="#home">Home</S.a></S.Button>
             <S.Button><S.a href="#about">About</S.a></S.Button>
             <S.Button><S.a href="#skills">Skills</S.a></S.Button>
-            <S.Button><S.a href="#projects">Projects</S.a></S.Button>
+            <S.Button><S.a href="#projects">Formações</S.a></S.Button>
             <S.Button><S.a href="#contact"></S.a></S.Button>
           </S.ButtonsContainer>
         </S.Header>

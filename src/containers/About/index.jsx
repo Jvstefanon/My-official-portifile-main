@@ -6,7 +6,7 @@ function About() {
     <>
       <S.AboutMeContainer className='about_me' id="about">
         <S.TituloTopicos>
-          About Me
+          Sobre Mim
         </S.TituloTopicos>
         <S.AboutContent>
           <div>
