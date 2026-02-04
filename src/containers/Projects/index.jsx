@@ -35,6 +35,7 @@ function Projects() {
                 <S.SubSkills>C#</S.SubSkills>
                 <S.SubSkills>HTML</S.SubSkills>
                 <S.SubSkills>CSS</S.SubSkills>
+                <S.SubSkills>Java Script</S.SubSkills>
               </S.SubContainer>
             
           </S.Card>
