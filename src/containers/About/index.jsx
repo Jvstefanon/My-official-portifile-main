@@ -1,4 +1,5 @@
-import * as S from "../About/styles";
+//potifile user: stefanon
+import * as S from "../About/styles"; 
 import { FaCode, FaLightbulb, FaMugHot } from "react-icons/fa";
 
 function About() {
