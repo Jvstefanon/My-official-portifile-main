@@ -47,7 +47,7 @@ function Home() {
       <S.HomeMeSection className="home_me" id="me">
         <S.img src={fotoPerfil} alt="foto de perfil" />
         <S.NomeTitle>João Stefanon</S.NomeTitle>
-        <S.NomeSubtitle>Junior Full-Stack Developer</S.NomeSubtitle>
+        <S.NomeSubtitle>Junior Front-End Developer</S.NomeSubtitle>
         <S.Descricao_A>
           Apaixonado por criar experiências web bonitas e funcionais com tecnologias
           modernas. Sempre disposto a aprender e crescer no mundo em constante
@@ -55,7 +55,7 @@ function Home() {
         </S.Descricao_A>
         <S.ButtonCV>
           <S.aCV
-            href="/files/curriculo.pdf"
+            href="/files/curriculo.pdf.pdf"
             download="CV_Joao_Stefanon.pdf"
           >
             Download CV
