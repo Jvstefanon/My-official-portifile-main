@@ -21,49 +21,60 @@ export const TituloTopicos = styled.h1`
 `;
 
 export const AboutMeContainer = styled.section`
-  min-height: 90vh; /* altura mínima de uma tela inteira */
+  min-height: 90vh;
   display: flex;
-  align-items: flex-start;
-  padding: 6rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 4rem 1.5rem;
+  box-sizing: border-box;
+
+  @media (min-width: 768px) {
+    padding: 6rem;
+  }
 `;
 
 export const AboutContent = styled.div`
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2rem;
+  margin-top: 2rem;
+
+  @media (min-width: 900px) {
     flex-direction: row;
     align-items: flex-start;
-    gap: 2rem;
+  }
 `;
 
 export const AboutText = styled.p`
-    color: #676767ff;
-    display: grid;
-    justify-content: start;
-    text-align: justify;
+  color: #676767ff;
+  text-align: justify;
+  max-width: 100%;
+  line-height: 1.6;
+  font-size: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 1rem;
+
+  @media (min-width: 900px) {
     max-width: 90%;
-    max-height: auto;
-    padding-left: 13rem;
-    font-weight: 700px;
-    margin-top: 1.5rem;
-    line-height: 1.6;
-    font-size: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: normal;
+  }
 `;
 
 export const Card = styled.div`
-    background-color: #040404ff;
-    display: flex;
+  background-color: #040404ff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+  margin: 0 0 1rem 0;
+  padding: 1rem;
+  border-radius: 10px;
+  gap: 1.2em;
+  width: 100%;
+  max-width: 750px;
+
+  @media (max-width: 768px) {
     flex-direction: row;
-    align-items: center;
-    color: #fff;
-    margin: 0 2px;
-    padding: 1rem;
-    border-radius: 10px;
-    padding-right: 4rem;
-    gap: 1.2em;
-    width: 750px;
-    margin-top: 1.5rem;
+  }
 `;
 
 export const IconWrapper = styled.div`
@@ -99,10 +110,12 @@ export const Description = styled.a`
     color: #c0c0c0;
 `;
 export const CardsContainer = styled.div`
-    padding-right: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
 
-    :hover {
-        background-color: #13131aff;
-        ;
-    }
- `;
+  @media (min-width: 900px) {
+    padding-left: 2rem;
+  }
+`;

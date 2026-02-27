@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { FaInstagram, FaLinkedin, FaGithub, FaCode, FaLightbulb, FaMugHot } from "react-icons/fa";
 
-// Header sem responsividade
+// Header responsivo
 export const Header = styled.header`
   position: fixed;
   top: 0;
@@ -11,30 +11,66 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px;
+  padding: 0.75rem 2rem;
   background-color: #000000ff;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 0.75rem 1rem;
+  }
 `;
 
-// Title sem responsividade
+// Title responsivo
 export const Title = styled.h1`
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #3d87ffff;
   background-color: #000000ff;
   position: relative;
-  padding: 10px;
-  margin-left: 10rem;
+  padding: 0.5rem 0;
+  margin: 0;
+
+  @media (min-width: 1024px) {
+    font-size: 2.5rem;
+  }
 `;
 
-// Botões sem responsividade
-export const Button = styled.button`
-  background-color: #000000ff;
-  position: relative;
-  right: 6rem;
+// Toggle do menu (hambúrguer)
+export const MenuToggle = styled.button`
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
   margin: 0;
-  font-size: 2em;
+  border-radius: 8px;
+  border: 1px solid #3d87ffff;
+  background-color: transparent;
+  cursor: pointer;
+
+  span {
+    width: 22px;
+    height: 2px;
+    border-radius: 999px;
+    background-color: #ffffffff;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+`;
+
+// Botões responsivos
+export const Button = styled.button`
+  background-color: transparent;
+  position: relative;
+  margin: 0;
+  font-size: 1rem;
   border: none;
   border-radius: 8px;
-  padding: 10px 12px 0 0.4rem;
+  padding: 8px 0.4rem;
   transition: background 0.2s, color 0.2s;
 
   &::after {
@@ -54,7 +90,7 @@ export const Button = styled.button`
     transform: scaleX(1);
     transform-origin: left;
   }
-`
+`;
 
 export const a = styled.a`
     color: #ffffffff;
@@ -66,60 +102,112 @@ export const a = styled.a`
     &:hover{
        color: #3d87ffff;    
     }
-`
-export const ButtonsContainer = styled.div`
-  display: flex;
-  margin-right: 1rem;
-  gap: 15px;
 `;
 
-// Imagem sem responsividade
-export const img = styled.img`
+export const ButtonsContainer = styled.div`
   display: flex;
+  align-items: center;
+  gap: 15px;
+
+  @media (max-width: 768px) {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.75rem 1rem 1rem;
+    background-color: #000000ff;
+    gap: 8px;
+    display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+    border-bottom: 1px solid #1c4382ff;
+  }
+
+  @media (min-width: 769px) {
+    margin-right: 1rem;
+  }
+`;
+
+// Imagem responsiva
+export const img = styled.img`
+  display: block;
   margin: 0 auto;
-  width: 350px;
+  width: min(350px, 70vw);
   height: auto;
   border-radius: 17rem;
   border-color: #1c4382ff;
   border-style: solid;
   border-width: 4px;
   margin-top: 8rem;
+
+  @media (max-width: 768px) {
+    margin-top: 7rem;
+  }
 `;
 
-// HomeMeSection sem responsividade
+// HomeMeSection responsiva
 export const HomeMeSection = styled.section`
   margin-top: 9rem;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+
+  @media (min-width: 768px) {
+    padding: 0;
+  }
 `;
 export const Descricao_A = styled.a`
   color: #676767ff;
   text-align: center;
   display: block; 
   flex-direction: column;
-  font-size: 109%;
+  font-size: 1rem;
   padding: 15px;
   margin: 0 auto;
-  width: 35%;
+  width: 90%;
+  max-width: 600px;
+
+  @media (min-width: 768px) {
+    width: 60%;
+    font-size: 1.09rem;
+  }
+
+  @media (min-width: 1024px) {
+    width: 35%;
+  }
 `;
+
 export const NomeTitle = styled.h1`
-    font-size: 1rem;
-    color: #aacbffff;
-    background-color: #000000ff;
-    position: relative;
-    text-align: center;
-    padding: 1rem;
+  color: #aacbffff;
+  background-color: #000000ff;
+  position: relative;
+  text-align: center;
+  padding: 1rem;
+  font-size: 2.5rem;
+  margin-top: 1.5rem;
+
+  @media (min-width: 768px) {
+    font-size: 3.2rem;
+  }
+
+  @media (min-width: 1024px) {
     font-size: 4rem;
+  }
 `;
+
 export const NomeSubtitle = styled.h3`
-    font-size: 2rem;
-    color: rgba(0, 100, 207, 1);
-    background-color: #000000ff;
-    position: relative;
-    text-align: center;
-    font-size: 155%;
-    `
+  color: rgba(0, 100, 207, 1);
+  background-color: #000000ff;
+  position: relative;
+  text-align: center;
+  font-size: 1.1rem;
+
+  @media (min-width: 768px) {
+    font-size: 1.4rem;
+  }
+`;
 export const ButtonCV = styled.button`
     display: flex;
-    margin: 0 auto;
+    margin: 1rem auto 0;
     font-family: 'SF Pro Rounded', Helvetica, sans-serif;
     justify-content: center;
     background-color: #000000ff;
@@ -127,20 +215,19 @@ export const ButtonCV = styled.button`
     border-radius: 12px;
     border-style: solid;
     border-width: 1px;
-    margin-top: 1rem;
     &:hover{
        background-color: #001441ff;  
     }
-    `
+    `;
 export const aCV = styled.a`
     color: #3d87ffff; 
-    padding: 15px;
-    font-size: 120%;
+    padding: 12px 18px;
+    font-size: 1rem;
     text-decoration: none;
         &:hover{
            color: #ffffffff;
         }
-    `
+    `;
 export const SocialContainer = styled.div`
   display: flex;
   justify-content: center;

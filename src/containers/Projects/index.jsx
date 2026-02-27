@@ -12,7 +12,9 @@ function Projects() {
         <S.TituloTopicos>Formações</S.TituloTopicos>
           <S.Card_Porjects>
             <S.Card>
-                <S.FormImg src={Fortec} alt="foto de perfil" />
+                <S.LogoWrapper>
+                  <S.FormImg src={Fortec} alt="foto de perfil" />
+                </S.LogoWrapper>
                 <S.FormName>Ensino Médio Técnico em TI - Completo</S.FormName>
                 
                 <S.SubContainer>
@@ -29,7 +31,9 @@ function Projects() {
             </S.Card>
 
           <S.Card>
-            <S.FormImg2 src={Unisanta} alt="foto de perfil" />
+            <S.LogoWrapper>
+              <S.FormImg2 src={Unisanta} alt="foto de perfil" />
+            </S.LogoWrapper>
             <S.FormName>Bacharelado em Sistemas da Informação - Cursando</S.FormName>
               <S.SubContainer>
                 <S.SubSkills>C#</S.SubSkills>
